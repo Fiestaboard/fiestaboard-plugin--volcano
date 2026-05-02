@@ -1,0 +1,79 @@
+{
+  "id": "volcano",
+  "name": "Volcano Activity",
+  "version": "0.1.0",
+  "description": "Display current volcanic eruption alerts from the Smithsonian Global Volcanism Program RSS feed.",
+  "author": "FiestaBoard Team",
+  "icon": "mountain",
+  "category": "data",
+  "repository": "https://github.com/Fiestaboard/fiestaboard-plugin--volcano",
+  "documentation": "README.md",
+  "min_refresh_seconds": 3600,
+  "settings_schema": {
+    "type": "object",
+    "properties": {
+      "enabled": {
+        "type": "boolean",
+        "title": "Enabled",
+        "default": false
+      },
+      "refresh_seconds": {
+        "type": "integer",
+        "title": "Refresh Interval (seconds)",
+        "description": "How often to check for eruption updates.",
+        "default": 3600,
+        "minimum": 1800
+      }
+    },
+    "required": []
+  },
+  "variables": {
+    "groups": {
+      "latest": {
+        "label": "Latest Activity"
+      },
+      "stats": {
+        "label": "Statistics"
+      }
+    },
+    "simple": {
+      "volcano_name": {
+        "description": "Name of the most recently active volcano",
+        "type": "string",
+        "max_length": 20,
+        "group": "latest",
+        "example": "Kilauea"
+      },
+      "country": {
+        "description": "Country of the most recently active volcano",
+        "type": "string",
+        "max_length": 15,
+        "group": "latest",
+        "example": "United States"
+      },
+      "activity": {
+        "description": "Brief activity description",
+        "type": "string",
+        "max_length": 22,
+        "group": "latest",
+        "example": "Eruption ongoing"
+      },
+      "active_count": {
+        "description": "Number of volcanoes listed as active this week",
+        "type": "integer",
+        "max_length": 3,
+        "group": "stats",
+        "example": "12"
+      }
+    }
+  },
+  "screenshots": [
+    {
+      "src": "docs/board-display.png",
+      "alt": "Volcano Activity displayed on a Vestaboard",
+      "caption": "Example board output using the default template",
+      "primary": true
+    }
+  ],
+  "api_docs": "https://volcano.si.edu/"
+}
