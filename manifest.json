@@ -1,7 +1,7 @@
 {
   "id": "volcano",
   "name": "Volcano Activity",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Display current volcanic eruption alerts from the Smithsonian Global Volcanism Program RSS feed.",
   "author": "FiestaBoard Team",
   "icon": "mountain",
@@ -75,5 +75,47 @@
       "primary": true
     }
   ],
-  "api_docs": "https://volcano.si.edu/"
+  "api_docs": "https://volcano.si.edu/",
+  "demo": {
+    "name": "Volcano Activity Demo",
+    "device_type": "flagship",
+    "config": {
+      "enabled": true,
+      "refresh_seconds": 3600
+    },
+    "template": [
+      "Volcano Activity",
+      "",
+      "{{volcano.volcano_name}}",
+      "{{volcano.country}}",
+      "{{volcano.activity}}",
+      "{{volcano.active_count}} volcanoes active"
+    ],
+    "line_metadata": [
+      {
+        "alignment": "center",
+        "wrap": false
+      },
+      {
+        "alignment": "left",
+        "wrap": false
+      },
+      {
+        "alignment": "center",
+        "wrap": false
+      },
+      {
+        "alignment": "center",
+        "wrap": false
+      },
+      {
+        "alignment": "center",
+        "wrap": false
+      },
+      {
+        "alignment": "center",
+        "wrap": false
+      }
+    ]
+  }
 }
