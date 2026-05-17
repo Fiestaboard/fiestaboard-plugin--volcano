@@ -1,7 +1,7 @@
 {
   "id": "volcano",
   "name": "Volcano Activity",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Display current volcanic eruption alerts from the Smithsonian Global Volcanism Program RSS feed.",
   "author": "FiestaBoard Team",
   "icon": "mountain",
