@@ -34,11 +34,11 @@ class VolcanoPlugin(PluginBase):
             summary = latest.get("summary", "")
 
             # Title format is typically "Volcano Name (Country)"
-            volcano_name = title.split("(")[0].strip()[:20] if "(" in title else title[:20]
-            country = title.split("(")[1].rstrip(")").strip()[:15] if "(" in title else "Unknown"
+            volcano_name = title.split("(")[0].strip() if "(" in title else title
+            country = title.split("(")[1].rstrip(")").strip() if "(" in title else "Unknown"
 
             # Summarize activity from first sentence of summary
-            activity = summary.split(".")[0][:22] if summary else "Activity reported"
+            activity = summary.split(".")[0] if summary else "Activity reported"
 
             return PluginResult(
                 available=True,
