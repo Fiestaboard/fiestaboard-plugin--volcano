@@ -75,6 +75,28 @@
       "primary": true
     }
   ],
+  "teaser": "KILAUEA ERUPTS",
+  "previews": [
+    {
+      "device_type": "flagship",
+      "rows": [
+        "   Volcano Activity",
+        "",
+        "       Kilauea",
+        "    United States",
+        "   Eruption ongoing",
+        " 12 volcanoes active"
+      ]
+    },
+    {
+      "device_type": "note",
+      "rows": [
+        "{63}{64} VOLCANO",
+        "KILAUEA",
+        "{63}ERUPTING"
+      ]
+    }
+  ],
   "api_docs": "https://volcano.si.edu/",
   "demo": {
     "flagship": {
