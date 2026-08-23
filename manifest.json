@@ -1,8 +1,8 @@
 {
   "id": "volcano",
   "name": "Volcano Activity",
-  "version": "0.1.3",
-  "description": "Display current volcanic eruption alerts from the Smithsonian Global Volcanism Program RSS feed.",
+  "version": "0.2.0",
+  "description": "Display current volcanic eruption alerts from the Smithsonian Global Volcanism Program weekly report.",
   "author": "FiestaBoard Team",
   "icon": "mountain",
   "category": "data",
@@ -38,25 +38,25 @@
     },
     "simple": {
       "volcano_name": {
-        "description": "Name of the most recently active volcano",
+        "description": "Volcano at the top of this week's report; the GVP lists new activity before ongoing activity",
         "type": "string",
-        "max_length": 20,
+        "max_length": 22,
         "group": "latest",
         "example": "Kilauea"
       },
       "country": {
-        "description": "Country of the most recently active volcano",
+        "description": "Country that volcano is in",
         "type": "string",
-        "max_length": 15,
+        "max_length": 20,
         "group": "latest",
         "example": "United States"
       },
       "activity": {
-        "description": "Brief activity description",
+        "description": "Activity status from the report, shortened to fit a board line",
         "type": "string",
         "max_length": 22,
         "group": "latest",
-        "example": "Eruption ongoing"
+        "example": "Ongoing Eruption"
       },
       "active_count": {
         "description": "Number of volcanoes listed as active this week",
